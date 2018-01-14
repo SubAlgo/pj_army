@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/w3school.css">
     <title>ระบบงานจัดการฐานข้อมูลจัดซื้อ-จัดจ้างโรงงานวัตถุระเบิดทหาร</title>
 </head>
 
@@ -32,11 +33,14 @@
                                 <input type="password" name="password">
                             </td>        
                         </tr>
+
                         
                         <tr>
                             <td colspan="2" align="center">
-                                <input class="button button-blue" type="submit" value="Login">
-                                <span name="cancle" id="cancle" class="button button-red">cancle</span>        
+                                <br>
+                                <input type="submit" value="Login">
+                                <button type="button" onclick="alert('cancle login')">cancle</button>
+                                      
                             </td>
                         </tr>    
                     </table>
