@@ -1,40 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <style>
-        table, th, td 
-        {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-        
-        .button 
-        {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .button-blue {background-color: #008CBA;} /* Blue */
-        .button-red {background-color: #f44336;} /* Red */ 
-        .button-gray {background-color: #e7e7e7; color: black;} /* Gray */ 
-        .button-black {background-color: #555555;} /* Black */
-    </style>
-    
-    <title>รายงานสถานะโครงการ</title>
+<link rel="stylesheet" type="text/css" href="./css/mystyle.css">
 </head>
 <body>
+
+<div class="container">
+
+<?php
+    include './layout/header.php';
+    include './layout/nav.php';
+?>
+
+<!-- +++++++++++++++++ Content +++++++++++++++++ -->
+
 
     <table style="width:60%" align="center">
         <tr>
@@ -77,6 +56,16 @@
             <td> <input type="text"></td>
         </tr>
     </table>
-    
+
+<!-- +++++++++++++++++ Content +++++++++++++++++ -->
+
+<?php
+    include './layout/foot.php';
+?>
+
+
+
+</div>
+
 </body>
 </html>
