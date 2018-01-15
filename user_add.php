@@ -31,12 +31,12 @@
 
                 <tr>
                     <td>รหัสผู้ใช้</td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="userid" id=""></td>
                 </tr>
 
                 <tr>
                     <td>รหัสผ่านผู้ใช้</td>
-                    <td><input type="password" name="" id=""></td>
+                    <td><input type="password" name="password" id=""></td>
                 </tr>
 
                 <tr>
@@ -48,21 +48,21 @@
 
                 <tr>
                     <td>ชื่อ</td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="username" id=""></td>
                 </tr>
 
                 <tr>
                     <td>นาสกุล</td>
-                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="usersurname" id=""></td>
                 </tr>
 
                 <tr>
                     <td>ระดับสิทธิ</td>
                     <td>
                         <select name="cars">
-                            <option value="volvo">Admin</option>
-                            <option value="saab">SuperUser</option>
-                            <option value="fiat">User</option>
+                            <option value="1">Admin</option>
+                            <option value="2">SuperUser</option>
+                            <option value="3">User</option>
                             
                         </select>
                     </td>
@@ -90,6 +90,8 @@
 
 </article>
 </div>
+
+
 
 <!-- +++++++++++++++++ Content +++++++++++++++++ -->
 

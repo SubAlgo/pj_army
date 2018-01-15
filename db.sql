@@ -18,13 +18,17 @@ CREATE TABLE USERS (
 
 CREATE TABLE PROJECT (
     project_id INT NOT NULL AUTO_INCREMENT,
+
     project_title varchar(200),
     book_no varchar(200),
     date_at VARCHAR(20),
+
     check_budget VARCHAR(20),
     budget int,
+
     principle_allow VARCHAR(20),
-    buy_allow VARCHAR(20),
+    buy_accept VARCHAR(20),
+    
     check_form VARCHAR(20),
     
     order_no VARCHAR(20),
@@ -37,7 +41,7 @@ CREATE TABLE PROJECT (
 
     binding_statement VARCHAR(20),
 
-    check_at VARCHAR(20),
+    check_accept VARCHAR(20),
 
     send_withdraw VARCHAR(20),
     
