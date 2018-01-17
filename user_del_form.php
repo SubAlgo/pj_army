@@ -20,7 +20,7 @@
 <?php
     include 'db.php';
     $id = ($_GET['id']);
-    echo $id;
+    
     
     $sql = "SELECT * FROM users WHERE user_id = '{$id}'";
 
@@ -47,12 +47,12 @@
 <article>
 
     <div class="w3-container">
-        <form method="post" action="http://localhost/pj_army/user_edit.php">
+        <form method="post" action="http://localhost/pj_army/user_del.php">
             <table class="w3-table">
                 <tr>
                     <th colspan="2" aling="center">
                         <div align="center">
-                            แก้ไขข้อมูลผู้ใช้
+                            ลบข้อมูลผู้ใช้
                         </div>
                     </th>
                 </tr>
@@ -65,28 +65,19 @@
 
                 <tr>
                     <td>ชื่อ</td>
-                    <td><input type="text" name="username" id="" value="<?php echo $user_name;  ?>"></td>
+                    <td><input type="text" name="username" readonly="true" id="" value="<?php echo $user_name;  ?>"></td>
                 </tr>
 
                 <tr>
                     <td>นาสกุล</td>
-                    <td><input type="text" name="usersurname" id="" value="<?php echo $user_surname; ?>" ></td>
+                    <td><input type="text" name="usersurname" readonly="true" id="" value="<?php echo $user_surname; ?>" ></td>
                 </tr>
 
-                <tr>
-                    <td>ระดับสิทธิ</td>
-                    <td>
-                        <select name="permis">
-                            <option value="1">Admin</option>
-                            <option value="2">SuperUser</option>
-                            <option value="3">User</option>
-                        </select>
-                    </td>
-                </tr>
+                
                 <tr>
                     <td colspan="2">
                         <div align="center">
-                            <input type="submit" name="" id="" value="บันทึก">
+                            <input type="submit" name="" id="" value="ยืนยัน">
                             <button type="button" onclick="alert('Hello world-*-!')">ยกเลิก</button>
                         </div>
                     </td>

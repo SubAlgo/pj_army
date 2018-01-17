@@ -54,7 +54,7 @@
                                 <td>{$row['permission_title']}</td>
                                 <td>
                                     <a href='./user_edit_form.php/?id={$row['user_id']}'>แก้ไข</a>
-                                    <a href='./user_del.php/?id={$row['user_id']}'>ลบ</a>                      
+                                    <a href='./user_del_form.php/?id={$row['user_id']}'>ลบ</a>                      
                                 </td>
                               </tr>";
                     }
