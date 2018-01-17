@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta http-equiv=Content-Type content="text/html; charset=tis-620">
 <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
 <link rel="stylesheet" type="text/css" href="./css/w3school.css">
 

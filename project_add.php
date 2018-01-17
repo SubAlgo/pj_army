@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+</head>
+<body>
 <?php
    
     include 'db.php';
+    
 
     
     $project_title      = (string)$_POST['project_title'];      //หน่วยเสอนความต้องการ
@@ -22,23 +32,23 @@
     $send_withdraw      = (string)$_POST['send_withdraw'];      //ส่งขอเบิกเงิน เมื่อ
 
     $sql = "INSERT INTO PROJECT (`project_title`, `book_no`, `date_at`, `check_budget`, `budget`, `principle_allow`, `buy_accept`, `check_form`, `order_no`, `order_date`, `order_deadline`, `promise_no`, `promise_date`, `promise_deadline`, `binding_statement`, `check_accept`, `send_withdraw`)
-                    VALUES({$project_title},
-                            $book_no,
-                            $date_at,
-                            $check_budget,
-                            $budget,
-                            $principle_allow,
-                            $buy_accept,
-                            $check_form,
-                            $order_no,
-                            $order_date,
-                            $order_deadline,
-                            $promise_no,
-                            $promise_date,
-                            $promise_deadline,
-                            $binding_statement,
-                            $check_accept,
-                            $send_withdraw)";
+                    VALUES('$project_title',
+                            '$book_no',
+                            '$date_at',
+                            '$check_budget',
+                            '$budget',
+                            '$principle_allow',
+                            '$buy_accept',
+                            '$check_form',
+                            '$order_no',
+                            '$order_date',
+                            '$order_deadline',
+                            '$promise_no',
+                            '$promise_date',
+                            '$promise_deadline',
+                            '$binding_statement',
+                            '$check_accept',
+                            '$send_withdraw');";
 
                             if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
@@ -67,3 +77,6 @@
 
 
 ?>
+    
+</body>
+</html>
