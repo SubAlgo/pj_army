@@ -28,16 +28,16 @@
   <div class="outer">
         <div class="middle">
             <div class="inner">
-                <form method="post" action="user_check.php">
+                <form method="post" action="user_login.php">
                     <table align="center">
                         <tr>
                             <td colspan="2" align='center'>LOGIN</td>
                         </tr>
                         
                         <tr>
-                            <td>Username :</td>
+                            <td>ID :</td>
                             <td>
-                                <input type="text" name="username">
+                                <input type="text" name="id">
                             </td>
                         </tr>
                         
