@@ -1,107 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="./css/mystyle.css">
-<link rel="stylesheet" type="text/css" href="./css/w3school.css">
-
-</head>
-<body>
-
-<div class="container">
-
 <?php
-    include './layout/header.php';
-    include './layout/nav.php';
+    include 'db.php';
+
+    $user_id = trim((string)$_POST['userid']);
+    $user_password = trim((string)$_POST['password']);
+    $user_password2 = trim((string)$_POST['password2']);
+    $user_name = trim((string)$_POST['username']);
+    $user_surname = trim((string)$_POST['usersurname']);
+    $user_permission = trim((string)$_POST['permis']);
+
+    echo "$user_id <br>";
+    echo "$user_password <br>";
+    echo "$user_password2 <br>";
+    echo "$user_name <br>";
+    echo "$user_surname <br>";
+    echo "$user_permission <br>";
+
+    if($user_password != $user_password2) {
+        echo "password ไม่ถูกต้อง";
+        header( "refresh:2; url=./user_add_form.php" ); 
+        exit(1);
+    }
+
+    if($user_id == "" || $user_password == "" || $user_name == "" || $user_surname == "" || $user_permission == "") {
+        echo "กรอกข้อมูลไม่ครบ!!";
+        header( "refresh:2; url=./user_add_form.php" ); 
+        exit(1);
+    }
+
+    $sql = "INSERT INTO users (`user_id`, `user_password`, `user_name`, `user_surname`, `permission_id`) 
+            VALUES ('$user_id',
+                    '$user_password',
+                    '$user_name',
+                    '$user_surname',
+                    '$user_permission');";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+
 ?>
-
-<!-- +++++++++++++++++ Content +++++++++++++++++ -->
-<div>
-<article>
-
-    <div class="w3-container">
-        <form method="post" action="index.php">
-            <table class="w3-table">
-                <tr>
-                    <th colspan="2" aling="center">
-                        <div align="center">
-                            Create User
-                        </div>
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>รหัสผู้ใช้</td>
-                    <td><input type="text" name="userid" id=""></td>
-                </tr>
-
-                <tr>
-                    <td>รหัสผ่านผู้ใช้</td>
-                    <td><input type="password" name="password" id=""></td>
-                </tr>
-
-                <tr>
-                    <td>รหัสผ่านผู้ใช้ (อีกครั้ง)</td>
-                    <td>
-                        <input type="password" name="" id="">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>ชื่อ</td>
-                    <td><input type="text" name="username" id=""></td>
-                </tr>
-
-                <tr>
-                    <td>นาสกุล</td>
-                    <td><input type="text" name="usersurname" id=""></td>
-                </tr>
-
-                <tr>
-                    <td>ระดับสิทธิ</td>
-                    <td>
-                        <select name="cars">
-                            <option value="1">Admin</option>
-                            <option value="2">SuperUser</option>
-                            <option value="3">User</option>
-                            
-                        </select>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <div align="center">
-                            <input type="submit" name="" id="" value="บันทึก">
-                            <button type="button" onclick="alert('Hello world!')">ยกเลิก</button>
-                        </div>
-                    </td>
-                </tr>
-            
-            </table>
-
-
-        </form>
-        
-    </div>
-
-        
-    </table>
-    
-
-</article>
-</div>
-
-
-
-<!-- +++++++++++++++++ Content +++++++++++++++++ -->
-
-<?php
-    include './layout/foot.php';
-?>
-
-
-
-</div>
-
-</body>
-</html>
