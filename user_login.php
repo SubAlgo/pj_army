@@ -15,13 +15,14 @@
     ------------------------------------------------------------------*/
     if ($result->num_rows > 0) {
 
-        $exp = time() + (15 * 60); // set time 15 minutes
+        $exp = time() + (60*15); // set time 15 minutes
 
         setcookie('userid', $userid, $exp);
         setcookie('password', $password, $exp);
+       
         $_SESSION['userid'] = $userid;
 
-        header( "refresh:3; url=./user_management.php" ); 
+        header( "refresh:1; url=./user_management.php" ); 
         exit(1);
     
     } else {

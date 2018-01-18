@@ -21,6 +21,8 @@
       echo "<li><a href='{$ln}user_add_form.php'>เพิ่ม ผู้ใช้งาน</a></li>";
       echo "<hr>";
       echo "<li><a href='{$ln}user_management.php'>จัดการผู้ใช้</a></li>";
+      echo "<hr>";
+      echo "<li><a href='{$ln}func_logout.php'>Logout</a></li>";
     ?>
     <hr>
     

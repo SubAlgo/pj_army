@@ -5,48 +5,21 @@
 <link rel="stylesheet" type="text/css" href="./css/mystyle.css">
 <link rel="stylesheet" type="text/css" href="./css/table.css">
 
-
-
 </head>
 <body>
-
-<div class="container">
 
 <?php
     include './layout/header.php';
     include './layout/nav.php';
     
     include 'db.php';
-    /*
-    if(isset($_COOKIE['userid']) && isset($_COOKIE['password'])){
-        $userid = $_COOKIE['userid'];
-        $password = $_COOKIE['password']);
 
-        $sql = "SELECT * FROM users WHERE user_id = '{$userid}' and user_password = '{$password}'";
-
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-
-        }
-    }
-    */
-    echo "echo === {$_SESSION['userid']} <br>";
-    echo "Cookie === {$_COOKIE['userid']} <br>";
-    if(!isset($_SESSION['userid'])) {
-      // echo "<fieldset>";
-       echo "<h2>ท่านยังไม่ได้เข้าสู่ระบบ</h2>";
-      // echo "<a href='./index.php'>เข้าสู่ระบบ";
-      // echo "</fieldset>";
-      header( "refresh:3; url=./index.php" ); 
-        exit(1);
-    } else {
-        echo "เข้าสู่ระบบเรียบร้อยแล้ว!!";
-    }
-
-    //unset($_SESSION['userid']);
+    include './func_checklogin.php';
 
 ?>
+
+<div class="container">
+
 
 <!-- +++++++++++++++++ Content +++++++++++++++++ -->
 
